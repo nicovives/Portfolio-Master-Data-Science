@@ -1,0 +1,24 @@
+# Bases de datos pesadas (Puedes añadir aquí otros formatos si los usas)
+*.dat
+*.parquet
+*.sqlite
+*.db
+
+# Ignorar la carpeta de datos crudos (crea una carpeta llamada 'data' para los datasets pesados)
+data/
+datasets/
+
+# Archivos de entorno y temporales de Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+
+# Entornos virtuales
+venv/
+env/
+.conda/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db

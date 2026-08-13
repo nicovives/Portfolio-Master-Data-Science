@@ -1,0 +1,717 @@
+[
+    {
+        "id": "e8c2f47500521807",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9b82f1cd950dda25",
+        "type": "tls-config",
+        "name": "energo_consumo",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "energo_consumo.cert.pem",
+        "keyname": "energo_consumo.private.key",
+        "caname": "AmazonRootCA1.pem.txt",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "9a29acdeeaedc73e",
+        "type": "mqtt-broker",
+        "name": "energo_consumo",
+        "broker": "localhost",
+        "port": "8883",
+        "tls": "9b82f1cd950dda25",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "df5b4d349f8c89e6",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "objeto_energo_1_nico.cert.pem",
+        "keyname": "objeto_energo_1_nico.private.key",
+        "caname": "AmazonRootCA1.pem.txt",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "abdc54ed2dc2a8fe",
+        "type": "mqtt-broker",
+        "name": "aws mqtt",
+        "broker": "a2an8j2g26989n-ats.iot.us-east-1.amazonaws.com",
+        "port": "8883",
+        "tls": "df5b4d349f8c89e6",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8e8b016edb545a79",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "a1s639ohtzlzoz-ats.iot.us-east-1.amazonaws.com",
+        "port": "8883",
+        "tls": "df5b4d349f8c89e6",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "bfca2e99d3a570c4",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "8883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f42360ef40d446ac",
+        "type": "debug",
+        "z": "e8c2f47500521807",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "0b98b50ea72ae2b3",
+        "type": "http request",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "f42360ef40d446ac",
+                "87eb2a92a09b1888"
+            ]
+        ]
+    },
+    {
+        "id": "811a5f163ee3e58e",
+        "type": "debug",
+        "z": "e8c2f47500521807",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "db5ae7f46f6ab03f",
+        "type": "comment",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "info": "Por defecto, devuelve el título de la página web\n'strong:contains(\"Precio medio\")').parent().parent().next().\nBusca la línea donde está el texto \"Precio medio\"\nparent().parent(). vuelve al inicio del párrafo\nnext(). pasa al párrafo siguiente",
+        "x": 1200,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "976a15931e1064e7",
+        "type": "inject",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 620,
+        "wires": [
+            [
+                "2ceeb5a73c867996"
+            ]
+        ]
+    },
+    {
+        "id": "d2445cc509a98b6d",
+        "type": "http request",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 570,
+        "y": 600,
+        "wires": [
+            [
+                "9bf322c2a99cf2ba",
+                "db4d79dd242a1e77"
+            ]
+        ]
+    },
+    {
+        "id": "9bf322c2a99cf2ba",
+        "type": "debug",
+        "z": "e8c2f47500521807",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c712ad537269b45b",
+        "type": "debug",
+        "z": "e8c2f47500521807",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2ceeb5a73c867996",
+        "type": "function",
+        "z": "e8c2f47500521807",
+        "name": "function 3",
+        "func": "const anyo=2025, mes=8, diaInicio=1, diaFin=2;\nconst urls=[];\nfor (let d =diaInicio; d<=diaFin;d++) {\n    urls.push({\n    url:\"https://www.meteociel.fr/temps-reel/obs_villes.php?code2=8359&jour2=\"+\n    d+\"&mois2=\"+mes+\"&annee2=\"+anyo,\n    anyo,\n    mes,\n    dia: d\n    });\n    \n}\nconsole.log(urls);\nreturn [urls]; // AL meterlo dentro de corchetes se manda cada enlace por separado.\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 620,
+        "wires": [
+            [
+                "d2445cc509a98b6d"
+            ]
+        ]
+    },
+    {
+        "id": "1f436ce7f93f1d7e",
+        "type": "mqtt out",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "topic": "/energo/precioluz",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e8b016edb545a79",
+        "x": 910,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "e17e39a6583dec93",
+        "type": "mqtt out",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "topic": "/energo/temp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e8b016edb545a79",
+        "x": 1030,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b6fe38082e4f4c1c",
+        "type": "inject",
+        "z": "e8c2f47500521807",
+        "d": true,
+        "name": "10seg",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "04d56d7a2d811842"
+            ]
+        ]
+    },
+    {
+        "id": "04d56d7a2d811842",
+        "type": "function",
+        "z": "e8c2f47500521807",
+        "name": "Generación Consumo",
+        "func": "const numHouses = 5; // Simula 5 hogares\nconst messages = [];\nconst now = new Date();\nconst hour = now.getHours();\n// Patrón de consumo simulado por hora\nlet baseConsumption;\nif (hour >= 0 && hour < 7) {\n baseConsumption = Math.random() * 0.6 + 0.2;\n} else if (hour >= 7 && hour < 21) {\n baseConsumption = Math.random() * 0.7 + 0.8;\n} else {\n baseConsumption = Math.random() * 1.0 + 1.5;\n}\nfor (let i = 1; i <= numHouses; i++) {\n const consumption = baseConsumption + (Math.random() - 0.5) * 0.5;\n messages.push({\n    topic: `energo/consumo/energo_house_${i.toString().padStart(2, '0')}`,\n    payload: {\n        consumption_kw: parseFloat(consumption.toFixed(2)),\n        timestamp: now.toISOString(),\n        unit: \"kW\"\n    }\n });\n}\n\nreturn [messages];\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "919cefbf9bad12a2",
+                "54c04f17ce1e90ab",
+                "a9c840a79c2e6220"
+            ]
+        ]
+    },
+    {
+        "id": "919cefbf9bad12a2",
+        "type": "mqtt out",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bfca2e99d3a570c4",
+        "x": 630,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "54c04f17ce1e90ab",
+        "type": "debug",
+        "z": "e8c2f47500521807",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "87eb2a92a09b1888",
+        "type": "cheerio-function",
+        "z": "e8c2f47500521807",
+        "name": "AnálisisLuz",
+        "func": "let precio = $('strong:contains(\"Precio medio\")')\n    .parent()\n    .parent()\n    .next()\n    .text();\n\nprecio = precio.substring(0, precio.length - 6);\nprecio = parseFloat(precio);\n\n// Obtener fecha actual\nlet hoy = new Date();\nlet ano = hoy.getFullYear();\nlet mes = hoy.getMonth() + 1; // empieza en 0, por eso sumamos 1\nlet dia = hoy.getDate();\n\n// Construir el payload\nmsg.payload = {\n    precio: precio,\n    dia: dia,\n    mes: mes,\n    ano: ano\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 1,
+        "x": 670,
+        "y": 360,
+        "wires": [
+            [
+                "811a5f163ee3e58e",
+                "1f436ce7f93f1d7e",
+                "5e3226fa70c1948f"
+            ]
+        ]
+    },
+    {
+        "id": "db4d79dd242a1e77",
+        "type": "cheerio-function",
+        "z": "e8c2f47500521807",
+        "name": "Análisis Temperatura",
+        "func": "let filas = $(\"b:contains('Windchill')\")\n    .parent() // Subo al td\n    .parent() // subo al tr\n    .parent() // subo al tbody\n    .children()\n\nlet valores = [];// array de valores vacío\n\nfilas.each(function() {\n    let celdas = $(this).children();\n    let hora = celdas.eq(0).text()\n    if (hora!= \"HeureUTC\"){\n        hora = hora.substring(0, hora.length-3);\n        hora = parseInt(hora);\n        let temp = celdas.eq(4).text();\n        temp = temp.substring(0, temp.length-3);\n        temp = parseFloat(temp);\n        console.log(\"Hora:\", hora, \"Temp:\", temp); // muestra las horas de la tabla en la consola\n        valores.push({\n            anyo: msg.anyo, \n            mes: msg.mes,\n            dia: msg.dia,\n            hora: hora, \n            temp, temp}); // añade valores al array\n    }\n});\n\nmsg.payload=valores\nreturn msg;",
+        "outputs": 1,
+        "noerr": 3,
+        "x": 800,
+        "y": 640,
+        "wires": [
+            [
+                "c712ad537269b45b",
+                "e17e39a6583dec93",
+                "9b0f614a976ece26"
+            ]
+        ]
+    },
+    {
+        "id": "ccf98ba03ab9d91d",
+        "type": "inject",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 320,
+        "wires": [
+            [
+                "5c551ab60c68463c"
+            ]
+        ]
+    },
+    {
+        "id": "5c551ab60c68463c",
+        "type": "function",
+        "z": "e8c2f47500521807",
+        "name": "function 2",
+        "func": "return{ url: \"https://tarifasgasluz.com/comparador/precio-kwh\"};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "0b98b50ea72ae2b3"
+            ]
+        ]
+    },
+    {
+        "id": "a9c840a79c2e6220",
+        "type": "mqtt out",
+        "z": "e8c2f47500521807",
+        "name": "mqtt aws",
+        "topic": "objeto_energo_1_nico",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e8b016edb545a79",
+        "x": 840,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "5e3226fa70c1948f",
+        "type": "mqtt out",
+        "z": "e8c2f47500521807",
+        "name": "mqtt aws",
+        "topic": "objeto_energo_1_nico",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e8b016edb545a79",
+        "x": 1100,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9b0f614a976ece26",
+        "type": "mqtt out",
+        "z": "e8c2f47500521807",
+        "name": "mqtt aws",
+        "topic": "objeto_energo_1_nico",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e8b016edb545a79",
+        "x": 1240,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "b2d4a687437de0b2",
+        "type": "inject",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 960,
+        "wires": [
+            [
+                "c48999d0bed779bb"
+            ]
+        ]
+    },
+    {
+        "id": "c48999d0bed779bb",
+        "type": "http request",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://apidatos.ree.es/es/datos/demanda/ire-general?start_date=2018-01-01T00:00&end_date=2018-12-31T23:59&time_trunc=month&geo_trunc=electric_system&geo_limit=peninsular&geo_ids=8741",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 960,
+        "wires": [
+            [
+                "0ff8687b137b5ac4"
+            ]
+        ]
+    },
+    {
+        "id": "4ab737f316630a27",
+        "type": "mqtt out",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "topic": "/widget/general/mensual/IRE/2018/ESP",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8e8b016edb545a79",
+        "x": 920,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "1c010a00ee95ccb1",
+        "type": "debug",
+        "z": "e8c2f47500521807",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "0ff8687b137b5ac4",
+        "type": "json",
+        "z": "e8c2f47500521807",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 610,
+        "y": 960,
+        "wires": [
+            [
+                "1c010a00ee95ccb1",
+                "4ab737f316630a27"
+            ]
+        ]
+    },
+    {
+        "id": "050fb1b542ac8fa0",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-cheerio-function": "1.0.0-rc.9"
+        }
+    }
+]
