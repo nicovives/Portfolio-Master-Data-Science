@@ -59,4 +59,3 @@ To build the analytical models, information from multiple official sources has b
 * Tourism and Employment [GVA VUT Registry](https://www.google.com/search?q=httpscindi.gva.eseswebturismellistat-oficial-empreses-turistiques&utm_source=gemini), Hotel Occupancy Reports, Registered unemployment data (SEPELabora).
 * Urbanism and Climate [Cadastre Electronic Office](https://www.google.com/search?q=httpswww.sedecatastro.gob.es&utm_source=gemini), AEMET OpenData API.
 * Environment and Society MITECO, Náyade (beach quality), SINAC, Statistical Portal of Criminality (Ministry of the Interior), Household Income Distribution Atlas (INE).
-* 
