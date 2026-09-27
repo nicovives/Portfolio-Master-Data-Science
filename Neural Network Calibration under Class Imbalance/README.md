@@ -1,11 +1,11 @@
-# ⚖️ Neural Network Calibration under Class Imbalance
+# Neural Network Calibration under Class Imbalance
 
-## 📖 Contexto del Proyecto
+## Contexto del Proyecto
 Los modelos de Deep Learning modernos a menudo sufren de sobreconfianza (overconfidence), produciendo predicciones con probabilidades muy altas incluso cuando se equivocan. Este problema se agrava significativamente cuando los modelos se entrenan con conjuntos de datos que presentan **desequilibrio de clases**.
 
 El objetivo de este proyecto es analizar cuantitativamente cómo el desequilibrio de clases afecta a la calibración de una red neuronal y evaluar la eficacia de distintas técnicas de regularización y muestreo para mitigar este efecto, logrando modelos más fiables y seguros.
 
-## 🎯 Objetivos Analíticos
+## Objetivos Analíticos
 1. **Auditoría de Calibración:** Evaluar la divergencia entre la precisión real (*Accuracy*) y la confianza predicha de un modelo base ante diferentes niveles de desequilibrio de clases.
 2. **Mitigación mediante Data Augmentation:** Cuantificar el impacto de diferentes estrategias de aumento de datos en la mejora de la calibración.
 3. **Mitigación mediante Técnicas Avanzadas:** Explorar e implementar mecanismos algorítmicos y de arquitectura para mejorar la calibración sin sacrificar el poder predictivo del modelo.
@@ -18,26 +18,28 @@ El objetivo de este proyecto es analizar cuantitativamente cómo el desequilibri
   - `ECE` (Expected Calibration Error) - Métrica principal para medir la desviación de la calibración.
   - `Accuracy` (Precisión) - Para garantizar que la mejora en calibración no degrada el rendimiento general.
 
-## 🔬 Metodología y Diseño de Experimentos
-
-El estudio se ha dividido en fases estructuradas, manteniendo un aislamiento estricto entre los conjuntos de Entrenamiento, Validación (para selección de hiperparámetros) y Test (solo para inferencia final).
-
-### Fase 1: Baseline y Evaluación del Desequilibrio
-- Entrenamiento de una Red Neuronal base bajo dos escenarios de desequilibrio de clases (moderado y severo).
-- Cálculo del ECE baseline como punto de referencia.
-
-### Fase 2: Impacto del Data Augmentation
-- Evaluación comparativa del modelo base vs. dos configuraciones avanzadas de Data Augmentation para comprobar si la exposición a mayor variabilidad sintética corrige la sobreconfianza en la clase mayoritaria.
-
-### Fase 3: Mecanismos de Calibración Avanzados
-Se ha implementado y comparado el rendimiento de técnicas especializadas en regularización y calibración, tales como:
-- **Label Smoothing:** Suavizado de etiquetas para evitar que la red empuje las probabilidades hacia los extremos (0 o 1).
-- **Mix-up / Data Blending:** Entrenamiento con combinaciones lineales convexas de pares de imágenes y sus etiquetas.
-- **MonteCarlo Dropout:** Inferencia estocástica para aproximar la incertidumbre del modelo.
-- **Ensembles:** Combinación de arquitecturas entrenadas con diferentes semillas para estabilizar las predicciones.
-
-## 📊 Resultados y Conclusiones
-*En este repositorio se incluye el código fuente (`.ipynb`) con la implementación de los experimentos, las curvas de calibración (Reliability Diagrams) y el análisis de la degradación del ECE frente al desequilibrio.*
-
 ---
-*Proyecto desarrollado como investigación práctica de técnicas avanzadas de Machine Learning, enfocado en la fiabilidad e interpretabilidad de modelos predictivos.*
+
+# Neural Network Calibration under Class Imbalance
+
+## Project Context
+
+Modern Deep Learning models often suffer from overconfidence, producing predictions with very high probabilities even when they are incorrect. This problem is significantly exacerbated when models are trained on datasets that present **class imbalance**.
+
+The objective of this project is to quantitatively analyze how class imbalance affects the calibration of a neural network and to evaluate the effectiveness of different regularization and sampling techniques to mitigate this effect, achieving more reliable and safe models.
+
+## Analytical Objectives
+
+1. **Calibration Audit:** Evaluate the divergence between true accuracy (*Accuracy*) and the predicted confidence of a base model under different levels of class imbalance.
+2. **Mitigation through Data Augmentation:** Quantify the impact of different data augmentation strategies on improving calibration.
+3. **Mitigation through Advanced Techniques:** Explore and implement algorithmic and architectural mechanisms to improve calibration without sacrificing the predictive power of the model.
+
+## 🛠️ Technology Stack and Tools
+
+* **Language:** Python
+* **Environment:** Google Colab / Jupyter Notebooks
+* **Deep Learning Frameworks:** (PyTorch / TensorFlow / Keras)
+* **Key Metrics:**
+  * `ECE` (Expected Calibration Error) - Main metric to measure calibration deviation.
+  * `Accuracy` - To ensure that the improvement in calibration does not degrade overall performance.
+ 
