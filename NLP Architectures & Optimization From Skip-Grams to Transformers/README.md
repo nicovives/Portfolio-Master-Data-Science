@@ -1,6 +1,6 @@
-# 🧠 NLP Architectures & Optimization: From Skip-Grams to Transformers
+# NLP Architectures & Optimization: From Skip-Grams to Transformers
 
-## 📖 Contexto del Proyecto
+## Contexto del Proyecto
 Este repositorio contiene una colección de implementaciones avanzadas de Procesamiento de Lenguaje Natural (NLP) desarrolladas desde cero. El proyecto traza una evolución técnica desde los modelos lineales fundamentales y la representación distribuida del lenguaje, hasta la optimización de arquitecturas Transformer modernas para inferencia eficiente.
 
 El objetivo principal no es solo entrenar modelos, sino **auditar su comportamiento, optimizar las operaciones tensoriales subyacentes y reducir los cuellos de botella computacionales** en la generación autorregresiva.
@@ -11,7 +11,7 @@ El objetivo principal no es solo entrenar modelos, sino **auditar su comportamie
 - **Visualización:** Matplotlib / Seaborn
 - **Técnicas Clave:** Multi-Query Attention (MQA), KV Caching, Einstein Summation (`einsum`), Word Embeddings (Skip-Grams).
 
-## 🏗️ Módulos del Proyecto
+## Módulos del Proyecto
 
 El proyecto está dividido en tres áreas analíticas y de desarrollo:
 
@@ -32,4 +32,43 @@ Implementación customizada de mecanismos de atención avanzados para maximizar 
 - **Impacto en la Calidad:** Evaluación de la degradación probabilística de las predicciones tras aplicar MQA frente a la ganancia en eficiencia de memoria (Memory Bandwidth).
 
 ---
-*Proyecto enfocado en la ingeniería interna de modelos NLP, optimización de inferencia algorítmica y eficiencia computacional.*
+
+## Project Context
+
+This repository contains a collection of advanced Natural Language Processing (NLP) implementations developed from scratch. The project traces a technical evolution from fundamental linear models and distributed language representation, to the optimization of modern Transformer architectures for efficient inference.
+
+The main objective is not only to train models, but to **audit their behavior, optimize the underlying tensor operations, and reduce computational bottlenecks** in autoregressive generation.
+
+## 🛠️ Technology Stack
+
+* **Language:** Python
+* **Deep Learning:** PyTorch / NumPy
+* **Visualization:** Matplotlib / Seaborn
+* **Key Techniques:** Multi-Query Attention (MQA), KV Caching, Einstein Summation (`einsum`), Word Embeddings (Skip-Grams).
+
+## Project Modules
+
+The project is divided into three analytical and development areas:
+
+### 1. Linear Classification and Training Dynamics
+
+Robust implementation of base classifiers to audit predictive confidence and prevent overfitting.
+
+* **Validation and Early Stopping:** Refactoring of a binary logistic regressor integrating strict partitions (Train/Val/Test) and *Early Stopping* by monitoring loss curves.
+* **Uncertainty Analysis (Multinomial):** Auditing of the *Softmax* probabilities output by a multinomial logistic regressor. The model was subjected to *Edge Cases* and semantically ambiguous phrases (decision boundaries) to evaluate the entropy and calibration of its predictions against out-of-distribution data.
+
+### 2. Representation Learning (Skip-Grams)
+
+Mathematical and architectural optimization of the Word2Vec algorithm (Skip-Grams) for the generation of *Word Embeddings*.
+
+* **Context Ablation Study (L):** Parameterization of the context window size ($L$) to analyze its impact on the latent space.
+* **Computational Profiling:** Replacement of Einstein notation (`einsum`) with conventional chained matrix multiplications (`matmul`). A runtime analysis (*benchmarking*) was included to determine which approach is more efficient at the hardware and CPU/GPU cache level.
+
+### 3. Transformer Optimization (MQA & KV Cache)
+
+Custom implementation of advanced attention mechanisms to maximize efficiency in the inference of *Language Models* (LLMs).
+
+* **Multi-Query Attention (MQA):** Modification of the standard *Multi-Head Attention* block to share a single *head* for *Keys* and *Values* across all *Query heads*.
+* **Key-Value (KV) Caching:** Implementation of a state cache for the autoregressive decoder, preventing the redundant recalculation of past *tokens*.
+* **Quality Impact:** Evaluation of the probabilistic degradation of predictions after applying MQA versus the gain in memory efficiency (Memory Bandwidth).
+
