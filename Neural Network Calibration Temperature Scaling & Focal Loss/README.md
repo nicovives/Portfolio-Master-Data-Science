@@ -61,10 +61,8 @@ To evaluate calibration in a realistic scenario, the experiments have been execu
 * **Language:** Python
 * **Deep Learning:** PyTorch / TensorFlow (Base frameworks)
 * **Evaluation Metrics:**
-* `ECE` (Expected Calibration Error) - Core calibration metric.
-* `Accuracy` - To monitor performance degradation.
-
-
+  * `ECE` (Expected Calibration Error) - Core calibration metric.
+  * `Accuracy` - To monitor performance degradation.
 * **Visualization:** *Reliability Diagrams*.
 
 ## Experimental Design and Methodology
